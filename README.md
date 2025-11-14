@@ -16,6 +16,11 @@ The extension opens a popup that shows the AI’s response and even allows **fol
 
 ---
 
+## 🖼 UI Preview (Popup)
+<img width="745" height="498" alt="image" src="https://github.com/user-attachments/assets/4e532b61-39a1-4a76-872a-40d1cf7a09a1" />
+
+---
+
 ## 🛠 How It Works
 
 ### 1️⃣ Right-click menu creation  
@@ -51,17 +56,6 @@ Open `popup.js` and replace:
 
 "Authorization": "Bearer API_KEY"
 model: "MODEL_NAME"
-
----
-## 🖼 UI Preview (Popup)
-
-Shows the selected text
-
-Displays AI response in a styled textarea
-
-Includes a follow-up question input box
-
-Footer: Powered by Groq AI
 
 ---
 
