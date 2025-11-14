@@ -1,101 +1,83 @@
-🧠 AI Text Search (Groq) – Chrome Extension
+# 🧠 AI Text Search (Groq) – Chrome Extension
 
-A simple and fast Chrome Extension that lets you select any text on a webpage, right-click, and instantly search it using Groq AI.
-The extension opens a popup that shows the AI’s response and even allows follow-up questions.
+A simple and fast Chrome Extension that lets you **select any text on a webpage**, right-click, and instantly **search it using Groq AI**.  
+The extension opens a popup that shows the AI’s response and even allows **follow-up questions**.
 
-🚀 Features
+---
 
-🔍 Right-click → “Search with AI”
+## 🚀 Features
 
-🤖 Uses Groq AI Chat Completion API
+- 🔍 Right-click → **“Search with AI”**
+- 🤖 Uses **Groq AI Chat Completion API**
+- 💬 Supports **follow-up questions** inside the popup
+- 💾 Remembers selected text using **Chrome Storage**
+- ⚡ Lightweight and fast (**Manifest V3**)
+- 🧱 Clean UI built with **HTML / CSS / JavaScript**
 
-💬 Supports follow-up questions inside the popup
+---
 
-💾 Remembers selected text using Chrome Storage
+## 🛠 How It Works
 
-⚡ Lightweight and fast (Manifest V3)
+### 1️⃣ Right-click menu creation  
+The extension adds a context menu when installed.
 
-🧱 Clean UI built with HTML/CSS/JS
+### 2️⃣ User selects text → opens popup  
+When the user chooses **“Search with AI”**, the selected text is saved and the popup opens.
 
-📦 Project Structure
-root/
-│── background.js
-│── manifest.json
-│── popup.html
-│── popup.js
-│── popup.css
-│── icon.png
-│── package.json
-│── package-lock.json
+### 3️⃣ Popup sends text to Groq AI  
+The popup makes a request to **Groq’s Chat Completion API** and displays the answer.
 
-🛠 How It Works
-1️⃣ Right-click menu creation
+### 4️⃣ Follow-up questions supported  
+The popup maintains a conversation history so users can ask follow-ups.
 
-2️⃣ User selects text → opens popup
+---
 
-When clicked, it stores the selected text and opens the extension popup.
+## 🧩 Installation (Developer Mode)
 
-3️⃣ Popup sends text to Groq AI
+1. Download or clone this repository.
+2. Open Chrome and go to:  
+   `chrome://extensions/`
+3. Enable **Developer Mode**.
+4. Click **Load Unpacked**.
+5. Select the project folder.
 
-4️⃣ Follow-up questions supported
+Your extension is now loaded and visible in Chrome’s toolbar.
 
-The popup keeps a conversation history.
+---
 
-🧩 Installation (Developer Mode)
+## 🔑 Setting Your API Key
 
-Download or clone this repository.
-
-Open Chrome → go to:
-chrome://extensions/
-
-Enable Developer Mode.
-
-Click Load Unpacked.
-
-Select the project folder.
-
-Your extension will appear in Chrome’s toolbar.
-
-🔑 Setting Your API Key
-
-In popup.js, replace:
+Open `popup.js` and replace:
 
 "Authorization": "Bearer API_KEY"
-
-
-with your real Groq API key:
-
-"Authorization": "Bearer YOUR_REAL_API_KEY"
-
-
-And update:
-
 model: "MODEL_NAME"
 
-Example:
+---
+## 🖼 UI Preview (Popup)
 
-model: "llama3-8b-8192"
+Shows the selected text
 
-🖼 UI Preview (Popup)
+Displays AI response in a styled textarea
 
-Shows the selected text.
+Includes a follow-up question input box
 
-Displays AI output in a styled textarea.
+Footer: Powered by Groq AI
 
-Has an input box for follow-ups.
+---
 
-Shows “Powered by Groq AI” footer.
+## 🧪 Future Improvements
 
-🧪 Future Improvements
+Store API key securely using Chrome Storage
 
-Store API key securely using Chrome storage.
+Add streaming responses
 
-Add streaming responses.
+Add dark mode for popup UI
 
-Add dark mode.
+Add user-uploaded screenshots to README
 
-Upload user screenshots.
+---
 
-📄 License
+## 📄 License
 
 This project is open-source under the MIT License.
+
